@@ -1,0 +1,17 @@
+# 🟡 Paso 1: Cargar datos y verificar
+from google.colab import drive
+import pandas as pd
+
+# Montar Google Drive
+drive.mount('/content/drive', force_remount=True)
+
+# Cargar archivo
+file_path = "/content/drive/My Drive/Colab Notebooks/Datos Katona_Control.xlsx"
+df = pd.read_excel(file_path)
+
+# Mostrar primeras filas y dimensiones
+print("🔹 Primeras filas:")
+print(df.head())
+
+print(f"🔹 Dimensiones originales: {df.shape}")
+
